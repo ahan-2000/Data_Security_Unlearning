@@ -7,7 +7,7 @@ Machine unlearning is the process of partially reversing the learning process in
 
 ## Definition of Machine Unlearning
 
-The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset \(D\), forget set \(S \subseteq D\), and a learning algorithm \(A\), an unlearning algorithm \(U\) is considered to unlearn with respect to \((D,S,A)\) if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset (\(A(D\setminus S)\)) and the unlearned model (\(U(A(D),S,D)\)) are highly similar.
+The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset \(D\), forget set \(S \subseteq D\), and a learning algorithm $A$ \(A\), an unlearning algorithm \(U\) is considered to unlearn with respect to \((D,S,A)\) if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset (\(A(D\setminus S)\)) and the unlearned model (\(U(A(D),S,D)\)) are highly similar.
 
 ## Proposed Methodology: Unlearning via Fine-tuning
 
