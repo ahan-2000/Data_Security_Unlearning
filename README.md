@@ -7,19 +7,19 @@ Machine unlearning is the process of partially reversing the learning process in
 
 ## Definition of Machine Unlearning
 
-The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset \(D\), forget set \(S \subseteq D\), and a learning algorithm $A$ \(A\), an unlearning algorithm \(U\) is considered to unlearn with respect to \((D,S,A)\) if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset (\(A(D\setminus S)\)) and the unlearned model (\(U(A(D),S,D)\)) are highly similar.
+The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset $$D$$, forget set $$S \subseteq D$$, and a learning algorithm $$A$$ , an unlearning algorithm $$U$$ is considered to unlearn with respect to $$(D,S,A)$$ if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset $$(A(D\setminus S))$$ and the unlearned model $$(U(A(D),S,D))$$ are highly similar.
 
 ## Proposed Methodology: Unlearning via Fine-tuning
 
 We propose a straightforward yet potent approach for unlearning, namely unlearning via fine-tuning. This approach involves fine-tuning the pre-trained model on the retained set of data (i.e., the dataset without the forget set). The definition of unlearning via fine-tuning can be summarized as follows:
 
-\[U = A(D) \xrightarrow{fine-tuned-on} L\]
+$$U = A(D) \xrightarrow{fine-tuned-on} L$$
 
 Where:
-- \(D\) denotes the entire dataset.
-- \(S \subseteq D\) represents the forget set.
-- \(A(D)\) denotes the model trained on \(D\).
-- \(L = D - S\) represents the retained set.
+- $$D$$ denotes the entire dataset.
+- $$S \subseteq D$$ represents the forget set.
+- $$A(D)$$ denotes the model trained on $$D$$.
+- $$L = D - S$$ represents the retained set.
 
 Unlearning via fine-tuning offers several advantages:
 - The original pre-trained model accurately captures the characteristics of the entire dataset, ensuring a robust representation of the overall data distribution.
