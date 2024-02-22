@@ -7,7 +7,7 @@ Machine unlearning is the process of partially reversing the learning process in
 
 ## Definition of Machine Unlearning
 
-The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset $$D$$, forget set $$S \subseteq D$$, and a learning algorithm $A$ , an unlearning algorithm $$U$$ is considered to unlearn with respect to $$(D,S,A)$$ if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset $$(A(D\setminus S))$$ and the unlearned model $$(U(A(D),S,D))$$ are highly similar.
+The definition of machine unlearning, as proposed by Sekhari et al. [1], involves a mathematical framework for assessing the effectiveness of unlearning algorithms. Given a fixed dataset $D$, forget set $S \subseteq D$, and a learning algorithm $A$ , an unlearning algorithm $U$ is considered to unlearn with respect to $(D,S,A)$ if certain conditions hold. These conditions ensure that the distributions of the model trained on the entire dataset $(A(D\setminus S))$ and the unlearned model $(U(A(D),S,D))$ are highly similar.
 
 ## Proposed Methodology: Unlearning via Fine-tuning
 
@@ -16,10 +16,10 @@ We propose a straightforward yet potent approach for unlearning, namely unlearni
 $$U = A(D) \xrightarrow{fine-tuned-on} L$$
 
 Where:
-- $$D$$ denotes the entire dataset.
-- $$S \subseteq D$$ represents the forget set.
-- $$A(D)$$ denotes the model trained on $$D$$.
-- $$L = D - S$$ represents the retained set.
+- $D$ denotes the entire dataset.
+- $S \subseteq D$ represents the forget set.
+- $A(D)$ denotes the model trained on $D$.
+- $L = D - S$ represents the retained set.
 
 Unlearning via fine-tuning offers several advantages:
 - The original pre-trained model accurately captures the characteristics of the entire dataset, ensuring a robust representation of the overall data distribution.
